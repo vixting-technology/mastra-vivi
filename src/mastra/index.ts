@@ -6,6 +6,7 @@ import { pdfToQuestionsWorkflow } from './workflows/generate-questions-from-pdf-
 import { textQuestionAgent } from './agents/text-question-agent';
 import { pdfQuestionAgent } from './agents/pdf-question-agent';
 import { pdfSummarizationAgent } from './agents/pdf-summarization-agent';
+import { viviPCDAgent } from './agents/vivi-pcd-agent';
 
 export const mastra = new Mastra({
   workflows: { pdfToQuestionsWorkflow },
@@ -13,6 +14,7 @@ export const mastra = new Mastra({
     textQuestionAgent,
     pdfQuestionAgent,
     pdfSummarizationAgent,
+    viviPCDAgent,
   },
   storage: new LibSQLStore({
     id: 'mastra-storage',
